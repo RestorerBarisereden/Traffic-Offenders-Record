@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="schoolsite.css">
+    <script defer src="./schoolsite.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="first-page" id="first">
+            <div>
+                <h1 class="title">Traffic Offenders of the Year 2024</h1>
+            </div>
+            <div class="myform">
+                <h2>Traffic Offenders Form</h2>
+                <div class="line-one">
+                    <label for="">Name</label><br>
+                    <input type="text" id="name" placeholder="Enter your Name" required>
+                </div>
+    
+                <div class="line-two">
+                    <div>
+                        <label for="">Drivers Sex</label><br>
+                        <select name="" id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Age</label><br>
+                        <input type="number" id="age" placeholder="Enter your age">
+                    </div>
+                </div>
+    
+                <div class="line-three">
+                    <div>
+                        <label for="">Car Model</label><br>
+                        <select name="" id="model">
+                            <option value="Abarth">Abarth</option>
+                            <option value="Acura">Acura</option>
+                            <option value="Alfa Romeo">Alfa Romeo</option>
+                            <option value="Aston Martin">Aston Martin</option>
+                            <option value="Audi">Audi</option>
+                            <option value="Bentley">Bentley</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Buick">Buick</option>
+                            <option value="Cadillac">Cadillac</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Chrysler">Chrysler</option>
+                            <option value="Citroen">Citroen</option>
+                            <option value="Dacia">Dacia</option>
+                            <option value="Dodge">Dodge</option>
+                            <option value="Ferrari">Ferrari</option>
+                            <option value="Fiat">Fiat</option>
+                            <option value="Ford">Ford</option>
+                            <option value="GMC">GMC</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Hummer">Hummer</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Infiniti">Infiniti</option>
+                            <option value="Isuzu">Isuzu</option>
+                            <option value="Jaguar">Jaguar</option>
+                            <option value="Jeep">Jeep</option>
+                            <option value="Kia">Kia</option>
+                            <option value="Lamborghini">Lamborghini</option>
+                            <option value="Lancia">Lancia</option>
+                            <option value="Land Rover">Land Rover</option>
+                            <option value="Lexus">Lexus</option>
+                            <option value="Lincoln">Lincoln</option>
+                            <option value="Lotus">Lotus</option>
+                            <option value="Maserati">Maserati</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            <option value="Mercury">Mercury</option>
+                            <option value="Mini">Mini</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Opel">Opel</option>
+                            <option value="Peugeot">Peugeot</option>
+                            <option value="Pontiac">Pontiac</option>
+                            <option value="Porsche">Porsche</option>
+                            <option value="Ram">Ram</option>
+                            <option value="Renault">Renault</option>
+                            <option value="Saab">Saab</option>
+                            <option value="Saturn">Saturn</option>
+                            <option value="Scion">Scion</option>
+                            <option value="Seat">Seat</option>
+                            <option value="Skoda">Skoda</option>
+                            <option value="Smart">Smart</option>
+                            <option value="SsangYong">SsangYong</option>
+                            <option value="Subaru">Subaru</option>
+                            <option value="Suzuki">Suzuki</option>
+                            <option value="Tesla">Tesla</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Volkswagen">Volkswagen</option>
+                            <option value="Volvo">Volvo</option>
+                            <option value="Wiesmann">Wiesmann</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Plate Number</label><br>
+                        <input type="text" id="plateNum" placeholder="Enter your plate number"/>
+                    </div>
+                </div>
+    
+                <div class="line-four">
+                    <div>
+                        <label for="">Crime Committed</label><br>
+                        <select name="Crime Comiited" id="crime">
+                            <option value="Speeding">Speeding</option>
+                            <option value="Distracted driving">Distracted driving</option>
+                            <option value="Running a red light or stop">Running a red light or stop</option>
+                            <option value="Reckless driving">Reckless driving</option>
+                            <option value="Tailgating">Tailgating</option>
+                            <option value="Driving under the influence">Driving under the influence</option>
+                            <option value="Failure to yield">Failure to yield</option>
+                            <option value="Not wearing a seatbelt">Not wearing a seatbelt</option>
+                            <option value="Improper turning">Improper turning</option>
+                            <option value="Parking violations">Parking violations</option>
+                            <option value="Under aged driving">Under aged driving</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Date of Arrest</label><br>
+                        <input type="date" id="dateOfArr" />
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" id="saveButton"><a href="#second"></a>Save</button>
+                    <button id="referal"><a href="#second" id="ref-id">Go to records</a></button>
+                </div>
+                
+            </div>
+        </div>
+    
+    
+        <div class="second-page" id="second">
+            <div class="overflow-x-auto">
+                <h1>Traffic Offenders Record</h1>
+                <table class="Table">
+                <thead class="headers">
+                    <tr>
+                        <th scope="col" class="Name">
+                            Name
+                        </th>
+                        <th scope="col" class="sex">
+                            Drivers Sex
+                        </th>
+                        <th scope="col" class="Age">
+                            Age
+                        </th>
+                        <th scope="col" class="Car">
+                            Car Model
+                        </th>
+                        <th scope="col" class="PlateNumber">
+                            Plate Number
+                        </th>
+                        <th scope="col" class="date">
+                            Date of Arrest
+                        </th>
+                        <th scope="col" class="crime">
+                            Crime Committed
+                        </th>
+                        <th scope="col" class="edit">
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="Points">
+                    <!-- <tr>
+                        <td class="points-lists">
+                            <div class="points-lists-name">BobDaniel Jumbo</div>
+                        </td>
+                        <td class="points-lists">
+                            <div class="points-lists-sex">Male</div>
+                        </td>
+                        <td class="points-lists">
+                            <div class="points-lists-car">Lexus 350</div>
+                        </td>
+                        <td class="points-lists">
+                            <div class="points-lists-plateNumber">NDHSK1324255</div>
+                        </td>
+                        <td class="points-lists">
+                            <div class="points-lists-date">20/12/2024</div>
+                        </td>
+                        <td class="points-lists-crime">
+                            <div>Didn't obey traffic rule</div>
+                        </td>
+                        <td class="points-lists-button">
+                            <button class="add">Add</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>    -->
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        </div>
+    
+    
+    </div>   
+
+        
+</body>
+</html>
