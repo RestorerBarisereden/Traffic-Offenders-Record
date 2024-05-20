@@ -10,6 +10,7 @@ btn.addEventListener("click", () => {
     let plateNumber = document.getElementById("plateNum").value;
     let arrestDate = document.getElementById("dateOfArr").value;
     let crimeCommitted = document.getElementById("crime").value;
+    // const trafficForm = document.getElementById("myform");
 
     var nameMatch = users.find((user) => user.name == fullName);
 
@@ -102,12 +103,18 @@ function displayUser() {
                     </td>
                     <td class="points-lists-button">
                         <button class="add">Update</button>
-                        <button class="delete">Delete</button>
+                        <button class="delete" onclick="${user}">Delete</button>
                     </td>
         </tr>   
-
         `
-    })
+    });
+
+    // const deletemybutton = document.querySelectorAll(".delete");
+    // deletemybutton.forEach((button)=>{
+    //     button.addEventListener("click", deletePerson);
+    // })
+
+   
 
     usersList.innerHTML = output;
 
@@ -124,6 +131,16 @@ function displayUser() {
     //   `;
     //   usersList.appendChild(row);
     // });
+}
+
+// function deletePerson(action){
+//     const index = action.target.getAttribute("data-index");
+//     persons.splice(index, 1);
+//     displayPerson();
+// }
+
+function editperson(){
+    // !danger
 }
 
 displayUser();
