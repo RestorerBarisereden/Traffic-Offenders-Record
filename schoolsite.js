@@ -51,6 +51,14 @@ btn.addEventListener("click", () => {
     if (!user) {
         throw new Error("opps! something went wrong, try again");
     }
+
+    document.getElementById("name").value = "";
+    document.getElementById("gender").selectedIndex = 0;
+    document.getElementById("age").value = "";
+    document.getElementById("model").selectedIndex = 0;
+    document.getElementById("plateNum").value = "";
+    document.getElementById("dateOfArr").value = "";
+    document.getElementById("crime").selectedIndex = 0;
     //   console.log(user);
     displayUser();
 });
@@ -71,6 +79,13 @@ function saveUser(full_name, driverSex, old, carModel, plateNumber, arrestDate, 
     users.push(obj);
     return users;
 }
+
+function deletePerson(action){
+    const index = action.target.getAttribute("data-index");
+    persons.splice(index, 1);
+    displayPerson();
+}
+
 
 function displayUser() {
 
@@ -103,16 +118,16 @@ function displayUser() {
                     </td>
                     <td class="points-lists-button">
                         <button class="add">Update</button>
-                        <button class="delete" onclick="${user}">Delete</button>
+                        <button class="delete" id="deleteButton" click="${user.deleteButton}">Delete</button>
                     </td>
         </tr>   
         `
     });
 
-    // const deletemybutton = document.querySelectorAll(".delete");
-    // deletemybutton.forEach((button)=>{
-    //     button.addEventListener("click", deletePerson);
-    // })
+    const deletemybutton = document.querySelectorAll(".delete");
+    deletemybutton.forEach((button)=>{
+        button.addEventListener("click", deletePerson);
+    })
 
    
 
@@ -133,11 +148,7 @@ function displayUser() {
     // });
 }
 
-// function deletePerson(action){
-//     const index = action.target.getAttribute("data-index");
-//     persons.splice(index, 1);
-//     displayPerson();
-// }
+
 
 function editperson(){
     // !danger
